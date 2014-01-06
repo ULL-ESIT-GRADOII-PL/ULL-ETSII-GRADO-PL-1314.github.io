@@ -65,17 +65,49 @@ Here’s an example of a very simple HTML document with one line of JavaScript t
       </html>
 {% endhighlight %}
 
-Jekyll also offers powerful support for code snippets:
+## In a Separate File
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
+You can also place the code in a separate file and link to it. 
+
+We could place our `alert` statement inside a file we
+name `hello.js` and then link to it using the `<script>` tag’s
+`src` attribute like so:
+
+{% highlight html %}
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Code in a separated file</title>
+    <script type="text/javascript" src="hello.js"></script>
+  </head>
+  <body>
+  </body>
+</html>
 {% endhighlight %}
 
+
+The **Document Object Model** (**DOM**) is a cross-platform and
+language-independent convention for representing and interacting
+with objects representing the elements in a HTML, XHTML or XML document.
+
+When you include a `<script>` tag in the document’s head, the code
+within it will execute right away, although the DOM is yet to be
+built. 
+Therefore, references to DOM
+elements will result in an error since the HTML inside the `<body>`
+isn’t there yet.
+
+You can wrap your code in the document’s `onload` function, which the
+browser executes once it’s done constructing the DOM. Alternatively,
+you could include your script tags at the very end of the document’s
+body, immediately before the closing `</body>` tag.
+
+
+<!---
 Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
 
 [jekyll-gh]: https://github.com/mojombo/jekyll
 [jekyll]:    http://jekyllrb.com
+--->
+
