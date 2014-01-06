@@ -1,0 +1,81 @@
+---
+layout: post
+title:  "Setting up the JavaScript Environment"
+---
+<!--
+#date:   2014-01-03 20:32:28
+#categories: jekyll update
+-->
+
+# Console
+
+When you need a new line within the console, rather than pressing
+`Enter`, which will execute the code, press `Shift Enter` for a new
+line.
+
+## Chrome
+
+To activate Chrome’s Developer Tools in Windows and Linux, press
+`Control Shift J`. On Mac, press `⌥ ⌘ J` (`alt cmd J`). This will
+open the console tab in the Developer Tools’ panel
+
+## Firefox
+
+To activate Firefox’s Web Console in Windows and Linux, press `Control Shift K`. 
+On Mac, press `⌥  ⌘ K` (`alt cmd K`). 
+
+## Safari
+
+Activating the console in Safari is a bit more involved than in
+other browsers. 
+
+* First, you need to enable the `Develop` menu in the `menu` bar. 
+* To do that, enter Safari’s settings by pressing `⌘ ,` (`cmd comma`), 
+* going to the `Advanced tab`, and checking the `Show Develop` checkbox
+
+Once you have done that, simply press `⌥ ⌘ C` (`alt cmd C`) to bring up the console, 
+
+You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
+To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
+
+# Using JavaScript in HTML Files
+
+If you’d prefer to skip the console and work inside an HTML document,
+you could go about it in one of two ways: 
+
+1. you could write the code directly in the HTML document, 
+2. or write it in a separate JavaScript file and load it up from the HTML file.
+
+## In the HTML File
+
+HTML provides a `<script>` tag, inside of which you can write executable JavaScript code. 
+
+Here’s an example of a very simple HTML document with one line of JavaScript that pops up an alert dialog with the message, `¡Hola mundo!`:
+
+{% highlight html %}
+      <!DOCTYPE HTML>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <title>Code inside an HTML document</title>
+        <script type="text/javascript">¡Hola mundo!</script>
+      </head>
+      <body>
+      </body>
+      </html>
+{% endhighlight %}
+
+Jekyll also offers powerful support for code snippets:
+
+{% highlight ruby %}
+def print_hi(name)
+  puts "Hi, #{name}"
+end
+print_hi('Tom')
+#=> prints 'Hi, Tom' to STDOUT.
+{% endhighlight %}
+
+Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
+
+[jekyll-gh]: https://github.com/mojombo/jekyll
+[jekyll]:    http://jekyllrb.com
