@@ -103,6 +103,26 @@ end # task :preview
 # Public: Alias - Maintains backwards compatability for theme switching.
 task :switch_theme => "theme:switch"
 
+desc "run jekyll serve at port 8080"
+task :serve do
+  sh "jekyll serve --port 8080 --detach --watch"
+end
+
+desc "stop jekyll daemon"
+task :stop do
+  ps = `ps -fA | grep jekyll | grep -v grep`
+  ps =~ /^\w+\s+(\d+)/
+  pid = $1
+  sh "kill -9 #{pid}"
+end
+
+
+desc "shows jekyll daemon pid"
+task :pid do
+  ps = `ps -fA | grep jekyll | grep -v grep`
+  puts ps
+end
+
 namespace :theme do
   
   # Public: Switch from one theme to another for your blog.
