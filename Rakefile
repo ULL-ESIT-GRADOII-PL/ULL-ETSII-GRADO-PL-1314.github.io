@@ -103,7 +103,7 @@ end # task :preview
 # Public: Alias - Maintains backwards compatability for theme switching.
 task :switch_theme => "theme:switch"
 
-desc "run jekyll serve at port 8080"
+desc "run jekyll serve at port 8080 (nereida)"
 task :serve do
   sh "jekyll serve --port 8080 --detach --watch"
 end
