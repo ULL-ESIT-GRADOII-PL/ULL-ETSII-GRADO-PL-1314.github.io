@@ -10,6 +10,10 @@ css: crguezl
 #categories: jekyll update
 -->
 
+{% latex %}
+$a_2 \times x^2 + a_1 \times x + a_0$
+{% endlatex %}
+
 # Console
 
 When you need a new line within the console, rather than pressing
