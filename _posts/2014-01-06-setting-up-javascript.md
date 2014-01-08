@@ -1,6 +1,9 @@
 ---
 layout: post
 title:  "Setting up the JavaScript Environment"
+categories: [javascript]
+tags: [javascript]
+css: crguezl
 ---
 <!--
 #date:   2014-01-03 20:32:28
@@ -52,7 +55,7 @@ HTML provides a `<script>` tag, inside of which you can write executable JavaScr
 
 Here’s an example of a very simple HTML document with one line of JavaScript that pops up an alert dialog with the message, `¡Hola mundo!`:
 
-{% highlight html %}
+{% highlight html linenos %}
       <!DOCTYPE HTML>
       <html lang="en">
       <head>

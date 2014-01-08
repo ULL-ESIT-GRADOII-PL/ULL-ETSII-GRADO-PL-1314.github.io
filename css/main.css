@@ -4,6 +4,13 @@
 /*
 /*****************************************************************************/
 
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Merriweather'), url(http://themes.googleusercontent.com/static/fonts/merriweather/v6/RFda8w1V0eDZheqfcyQ4EKRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+}
+
 /* Global Reset */
 * {
   margin: 0;
@@ -12,22 +19,54 @@
 
 html, body { height: 100%; }
 
+/*
 body {
   background-color: #FFF;
   font: 13.34px Helvetica, Arial, sans-serif;
   font-size: small;
   text-align: center;
 }
+*/
 
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%; }
+body {
+  background-color: #FFF;
+  font: 16px Merriweather, sans-serif;
+  text-align: justify;
+}
+
+
+h1 {
+  font-size: 100%; 
+  font-weight: bold; 
+  color:#DC143C;}
+
+h2 {
+  font-size: 95%; 
+  font-weight: bold; 
+  color:#DC143C;}
+
+h2 {
+  font-size: 90%; 
+  font-weight: bold; 
+  color:#DC143C;}
+
+h3, h4, h5, h6 {
+  font-size: 85%; 
+  font-weight: bold; 
+  color:#DC143C;}
 
 h1 { margin-bottom: 1em; }
 p { margin: 1em 0; }
 
+/*
 a         { color: #00a; }
 a:hover   { color: #000; }
 a:visited { color: #a0a; }
+*/
+
+a         { color: #6A0820; }
+a:hover   { color: #000; }
+a:visited { color: #6A0820; }
 
 /*****************************************************************************/
 /*
@@ -121,6 +160,20 @@ a:visited { color: #a0a; }
   border: 0;
 }
 
+hr {
+  border:none;
+  border-top:2px solid #eee;
+}
+
+.footnotes {
+  margin-top:2em;
+  border-top:1px solid #eee;
+  padding-top:1em;
+
+  font-size:0.9em;
+}
+
+
 /*****************************************************************************/
 /*
 /* Posts
@@ -142,6 +195,7 @@ a:visited { color: #a0a; }
   border: 1px solid #ddd;
   background-color: #eef;
   padding: 0 .2em;
+  font-size:16px;
 }
 
 .post pre code {
