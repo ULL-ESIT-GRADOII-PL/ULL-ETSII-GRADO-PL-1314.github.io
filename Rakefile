@@ -108,6 +108,11 @@ task :serve do
   sh "jekyll serve --port 8080 --detach --watch"
 end
 
+desc "deploy to nereida /var/www/"
+task :deploynereida do
+  sh "scp -r favicon.ico  _site/* nereida:/var/www/"
+end
+
 desc "stop jekyll daemon"
 task :stop do
   ps = `ps -fA | grep jekyll | grep -v grep`

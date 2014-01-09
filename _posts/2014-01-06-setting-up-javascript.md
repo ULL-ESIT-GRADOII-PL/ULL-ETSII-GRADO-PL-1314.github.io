@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Setting up the JavaScript Environment"
-categories: [javascript]
+categories: [js]
 tags: [javascript]
 css: crguezl
 ---
