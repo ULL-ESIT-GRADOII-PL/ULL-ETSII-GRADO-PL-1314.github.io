@@ -3,6 +3,7 @@ layout: post
 title:  "Setting up the JavaScript Environment"
 categories: [js]
 tags: [javascript]
+comments: true
 css: crguezl
 ---
 <!--
@@ -102,10 +103,11 @@ elements will result in an error since the HTML inside the `<body>`
 isn’t there yet.
 
 You can wrap your code in the document’s `onload` function, which the
-browser executes once it’s done constructing the DOM. Alternatively,
+rowser executes once it’s done constructing the DOM. Alternatively,
 you could include your script tags at the very end of the document’s
 body, immediately before the closing `</body>` tag.
 
+{% include disqus.html %}
 
 <!---
 Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
