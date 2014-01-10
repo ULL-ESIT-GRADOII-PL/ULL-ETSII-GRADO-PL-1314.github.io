@@ -95,6 +95,14 @@ task :page do
   end
 end # task :page
 
+desc "Bring _site from nereida branch"
+task :github do
+  sh "rm -fR _site config.ru css favicon.ico index.html jekyll js res"
+  sh "git checkout nereida -- _site"
+  sh "mv -iv _site/* ."
+  sh "rmdir _site"
+end
+
 desc "Launch preview environment"
 task :preview do
   sh "jekyll serve --watch"
@@ -108,7 +116,7 @@ task :serve do
   sh "jekyll serve --port 8080 --detach --watch"
 end
 
-desc "deploy to nereida /var/www/"
+desc "deploy to nereida /var/www/ via scp"
 task :deploynereida do
   sh "scp -r favicon.ico  _site/* nereida:/var/www/"
 end
