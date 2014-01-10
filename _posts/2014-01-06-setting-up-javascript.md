@@ -103,7 +103,7 @@ elements will result in an error since the HTML inside the `<body>`
 isn’t there yet.
 
 You can wrap your code in the document’s `onload` function, which the
-rowser executes once it’s done constructing the DOM. Alternatively,
+browser executes once it’s done constructing the DOM. Alternatively,
 you could include your script tags at the very end of the document’s
 body, immediately before the closing `</body>` tag.
 
