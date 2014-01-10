@@ -99,7 +99,7 @@ desc "Bring _site from nereida branch"
 task :github do
   sh "rm -fR _site config.ru css favicon.ico index.html jekyll js res"
   sh "git checkout nereida -- _site"
-  sh "mv -iv _site/* ."
+  sh "mv -v _site/* ."
   sh "rmdir _site"
 end
 
