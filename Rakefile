@@ -116,9 +116,14 @@ task :serve do
   sh "jekyll serve --port 8080 --detach --watch"
 end
 
-desc "deploy to nereida /var/www/ via scp"
+desc "deploy to nereida from branch nereida in directory /var/www/ via scp"
 task :deploynereida do
   sh "scp -r favicon.ico  _site/* nereida:/var/www/"
+end
+
+desc "deploy to nereida from branch master in directory /var/www/ via scp"
+task :master2nereida do
+  sh "scp -r * nereida:/var/www/"
 end
 
 desc "stop jekyll daemon"
