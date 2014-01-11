@@ -4,20 +4,20 @@ module Jekyll
 
     def initialize(tag_name, text, tokens)
       super
-      print "\ntag_name = "
-      pp tag_name
-      print "text = "
-      pp text
-      print "tokens = "
-      pp tokens
+#      print "\ntag_name = "
+#      pp tag_name
+#      print "text = "
+#      pp text
+#      print "tokens = "
+#      pp tokens
 
       @text = text
     end
 
     def render(context)
-      puts "context = "
-      pp context
-      "#{@text} #{Time.now}"
+#      puts "context = "
+#      pp context
+#      "#{@text} #{Time.now}"
     end
   end
 end

@@ -88,6 +88,14 @@ a:visited { color: #6A0820; }
   font-size: 80%;
 }
 
+span.categories {
+  color: blue;
+  text-transform:capitalize;
+  font-family: Monaco, "Courier New", monospace;
+  font-size: 100%;
+}
+
+
 /*****************************************************************************/
 /*
 /* Site

@@ -1,4 +1,5 @@
 name: Procesadores de Lenguajes. Itinerario de Computación. ETSII. ULL
+permalink: /:categories/:title
 markdown: redcarpet
 url: http://ull-etsii-grado-pl-1314.github.io
 pygments: true
